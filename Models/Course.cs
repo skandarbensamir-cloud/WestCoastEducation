@@ -1,4 +1,5 @@
-﻿namespace WestCoastEducation;
+﻿using WestCoastEducation.Enums;
+namespace WestCoastEducation.Models;
 
 public class Course
 {

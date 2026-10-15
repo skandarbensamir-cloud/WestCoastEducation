@@ -1,4 +1,5 @@
-﻿namespace WestCoastEducation;
+﻿using WestCoastEducation.Models;
+namespace WestCoastEducation;
 
 class Program
 {
