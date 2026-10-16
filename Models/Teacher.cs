@@ -1,8 +1,11 @@
 using System;
 
+
 namespace WestCoastEducation.Models;
 
-public class Teacher
+public class Teacher: Person
 {
+    public string? KnowledgeArea {get; set;}
+    public List<Course> Courses{get; set;} = new List<Course>();
 
 }
