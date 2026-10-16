@@ -2,7 +2,7 @@ using System;
 
 namespace WestCoastEducation.Models;
 
-public class Administrator
+public class Administrator: EducationManager
 {
 
 }
