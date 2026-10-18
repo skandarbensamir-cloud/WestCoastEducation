@@ -15,6 +15,19 @@ public class Teacher: Person //Ärver från Person...
         KnowledgeArea = knowledgeArea;
     }
 
-        
+  public void AddCourse(Course course)
+    {
+        foreach(Course existing in Courses)
+        {
+            if(existing.CourseNumber == course.CourseNumber)
+            {
+                Console.WriteLine("Course is already assigned to this teacher");
+                return;
+            }
+            
+            
+        }
+            Courses.Add(course);
+    }   
 
 }
