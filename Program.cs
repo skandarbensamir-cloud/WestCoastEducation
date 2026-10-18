@@ -28,6 +28,9 @@ class Program
         course.AddStudent(student);
         Console.WriteLine(course.Students.Count);
 
+        course.ListStudents();
+        
+
 
         
        

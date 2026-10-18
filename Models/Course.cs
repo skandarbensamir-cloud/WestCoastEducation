@@ -47,6 +47,15 @@ public Course(string courseTitle, int length, DateTime startDate, DateTime endDa
      Students.Add(student);
     }
 
+    public void ListStudents()
+    {
+        foreach(Student exsisting in Students)
+        {
+            Console.WriteLine(exsisting);
+            
+        }
+    }
+
     
 
 
