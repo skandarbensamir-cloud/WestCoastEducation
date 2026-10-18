@@ -22,6 +22,12 @@ class Program
 
         var student = new Student("Anders", "Svensson", "20070918", "0784563476", "41832", "Höstvädersgatan", "Göteborg");
         Console.WriteLine(student);
+        
+        
+        course.AddStudent(student);
+        course.AddStudent(student);
+        Console.WriteLine(course.Students.Count);
+
 
         
        

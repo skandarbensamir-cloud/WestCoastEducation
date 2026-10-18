@@ -30,6 +30,24 @@ public Course(string courseTitle, int length, DateTime startDate, DateTime endDa
     public List<Student> Students {get; set;} = new List<Student>();
 
     public Teacher? Teacher{get; set;}
+    public void AddStudent(Student student)
+    {
+        foreach(Student existing in Students)
+        {
+           if(existing.PersonIdentityNumber == student.PersonIdentityNumber)
+            {
+                Console.WriteLine("Student is already registered in this course");
+                return;
+            }
+            
+        }
+            
+        
+        
+     Students.Add(student);
+    }
+
+    
 
 
     
