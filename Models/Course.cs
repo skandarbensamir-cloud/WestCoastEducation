@@ -21,6 +21,11 @@ public Course(string courseTitle, int length, DateTime startDate, DateTime endDa
         CourseType = courseType; 
         CourseNumber = courseNumber;
     }
+
+    public override string ToString()
+    {
+        return $"CourseNumber: {CourseNumber}\nCourse: {CourseTitle}\nRemote or on-site: {CourseType}";
+    }
     
 }
 

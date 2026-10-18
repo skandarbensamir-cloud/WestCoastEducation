@@ -17,7 +17,8 @@ class Program
         CourseType courseType = CourseType.Classroom;
         string courseNumber = ("NCD26");
         string courseTitle = ("C# Basics");
-        Course course = new Course(courseTitle, length, startDate, endDate, courseType, courseNumber);
+        var course = new Course(courseTitle, length, startDate, endDate, courseType, courseNumber);
+        Console.WriteLine(course);
 
         
         Console.WriteLine(course.CourseTitle);
