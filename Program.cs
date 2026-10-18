@@ -29,6 +29,16 @@ class Program
         Console.WriteLine(course.Students.Count);
 
         course.ListStudents();
+
+        var teacher = new Teacher("Hjalmar", "Nilsson", "19770436", "0704686977", "42355", "Regnbärgsgatan", "Göteborg", "Programming");
+        Console.WriteLine(teacher);
+
+       teacher.AddCourse(course);
+       teacher.AddCourse(course);
+       Console.WriteLine(teacher.Courses.Count);
+
+       teacher.ListCourses();
+       
         
 
 
