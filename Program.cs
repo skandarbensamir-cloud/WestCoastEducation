@@ -21,11 +21,5 @@ class Program
         Console.WriteLine(course);
 
         
-        Console.WriteLine(course.CourseTitle);
-        Console.WriteLine(course.StartDate);
-        Console.WriteLine(course.EndDate);
-        Console.WriteLine(course.Length);
-        Console.WriteLine(course.CourseType);
-        Console.WriteLine(course.CourseNumber);
-    }
+      
 }
