@@ -24,4 +24,9 @@ public Person(string firstName, string lastName, string personIdentityNumber, st
         City = city;
     }
 
+    public override string ToString()
+    {
+        return $"Name:{FirstName}\nLastname:{LastName}\nContact information: {PhoneNumber}";
+    }
+
 }

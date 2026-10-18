@@ -20,6 +20,9 @@ class Program
         var course = new Course(courseTitle, length, startDate, endDate, courseType, courseNumber);
         Console.WriteLine(course);
 
+        var student = new Student("Anders", "Svensson", "20070918", "0784563476", "41832", "Höstvädersgatan", "Göteborg");
+        Console.WriteLine(student);
+
         
        
     }
