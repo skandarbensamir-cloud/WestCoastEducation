@@ -28,6 +28,15 @@ public class Teacher: Person //Ärver från Person...
             
         }
             Courses.Add(course);
+    }
+
+      public void ListCourses()
+    {
+        foreach(Course exsisting in Courses)
+        {
+            Console.WriteLine(exsisting);
+            
+        }
     }   
 
 }
