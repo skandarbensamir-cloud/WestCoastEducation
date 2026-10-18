@@ -26,6 +26,12 @@ public Course(string courseTitle, int length, DateTime startDate, DateTime endDa
     {
         return $"CourseNumber: {CourseNumber}\nCourse: {CourseTitle}\nRemote or on-site: {CourseType}";
     }
+
+    public List<Student> Students {get; set;} = new List<Student>();
+
+    public Teacher? Teacher{get; set;}
+
+
     
 }
 
