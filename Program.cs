@@ -2,6 +2,8 @@
 using WestCoastEducation.Enums;
 using WestCoastEducation.Models;
 namespace WestCoastEducation;
+using WestCoastEducation.Interfaces;
+using WestCoastEducation.Services;
 
 class Program
 {
@@ -20,7 +22,7 @@ class Program
         var course = new Course(courseTitle, length, startDate, endDate, courseType, courseNumber);
         Console.WriteLine(course);
 
-        var student = new Student("Anders", "Svensson", "20070918", "0784563476", "41832", "Höstvädersgatan", "Göteborg");
+        var student = new Student("Anders", "Svensson", "20070918", "0784563476", "41832", "Storvadersgatan", "Göteborg");
         Console.WriteLine(student);
         
         
@@ -30,7 +32,7 @@ class Program
 
         course.ListStudents();
 
-        var teacher = new Teacher("Hjalmar", "Nilsson", "19770436", "0704686977", "42355", "Regnbärgsgatan", "Göteborg", "Programming");
+        var teacher = new Teacher("Hjalmar", "Nilsson", "19770436", "0704686977", "42355", "Regnstamsgatan", "Göteborg", "Programming");
         Console.WriteLine(teacher);
 
        teacher.AddCourse(course);
@@ -38,6 +40,14 @@ class Program
        Console.WriteLine(teacher.Courses.Count);
 
        teacher.ListCourses();
+
+       ICourseStorage storage = new JsonCourseStorage();
+       storage.SaveCourses(teacher.Courses);
+
+       var LoadCourses = storage.LoadCourses();
+       Console.WriteLine(LoadCourses.Count);
+
+
        
         
 
