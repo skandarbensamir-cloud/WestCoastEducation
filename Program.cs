@@ -48,6 +48,53 @@ class Program
        Console.WriteLine(LoadCourses.Count);
 
 
+      
+
+        while (true)
+        {
+         Console.WriteLine("Press x to show courses");
+         Console.WriteLine("Press s to show students");
+         Console.WriteLine("Press v to save courses");
+         Console.WriteLine("Press l to load courses");
+         Console.WriteLine("Press Enter to exit the program");
+
+        
+       
+       var choice = Console.ReadLine();
+
+        switch (choice)
+        {
+            case "x":
+            teacher.ListCourses();
+            break;
+
+            case "s":
+            course.ListStudents();
+            break;
+
+            case "v":
+            storage.SaveCourses(teacher.Courses);
+            Console.WriteLine("Course saved");
+            break;
+
+
+            case "l":
+            var LoadCourses1 = storage.LoadCourses();
+            Console.WriteLine($"Loaded {LoadCourses1.Count} courses");
+            break;
+
+            case "":
+            return;
+
+        }
+
+            
+
+        }
+       
+       
+
+
        
         
 
