@@ -6,7 +6,7 @@ namespace WestCoastEducation.Services;
 
 public class JsonCourseStorage : ICourseStorage
 {
-    private string _filepath = "coruses.json";
+    private string _filepath = "coruse.json";
     public List<Course> LoadCourses()
     {
         if (!File.Exists(_filepath))
