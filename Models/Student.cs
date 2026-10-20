@@ -10,7 +10,7 @@ public Student(string firstName, string lastName, string personIdentityNumber, s
     {
         
     }
-
+public Student(){ }
     
     
 }

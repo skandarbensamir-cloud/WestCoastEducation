@@ -22,7 +22,7 @@ class Program
         var course = new Course(courseTitle, length, startDate, endDate, courseType, courseNumber);
         Console.WriteLine(course);
 
-        var student = new Student("Anders", "Svensson", "20070918", "0784563476", "41832", "Storvadersgatan", "Göteborg");
+        var student = new Student("Anders", "Svensson", "20070918", "0784563476", "41832", "Storvadersgatan", "Goteborg");
         Console.WriteLine(student);
         
         
@@ -32,7 +32,7 @@ class Program
 
         course.ListStudents();
 
-        var teacher = new Teacher("Hjalmar", "Nilsson", "19770436", "0704686977", "42355", "Regnstamsgatan", "Göteborg", "Programming");
+        var teacher = new Teacher("Hjalmar", "Nilsson", "19770436", "0704686977", "42355", "Regnstamsgatan", "Goteborg", "Programming");
         Console.WriteLine(teacher);
 
        teacher.AddCourse(course);

@@ -1,1 +1,24 @@
-[{"CourseNumber":"NCD26","Length":10,"CourseTitle":"C# Basics","StartDate":"2026-08-24T00:00:00","EndDate":"2028-06-17T00:00:00","CourseType":0,"Students":[{"FirstName":"Anders","LastName":"Svensson","PersonIdentityNumber":"20070918","PhoneNumber":"0784563476","Address":{"City":"G\u00F6teborg","Street":"H\u00F6stv\u00E4dersgatan","PostalCode":"41832"}}],"Teacher":null}]
+[
+  {
+    "CourseNumber": "NCD26",
+    "Length": 10,
+    "CourseTitle": "C# Basics",
+    "StartDate": "2026-08-24T00:00:00",
+    "EndDate": "2028-06-17T00:00:00",
+    "CourseType": 0,
+    "Students": [
+      {
+        "FirstName": "Anders",
+        "LastName": "Svensson",
+        "PersonIdentityNumber": "20070918",
+        "PhoneNumber": "0784563476",
+        "Address": {
+          "City": "Goteborg",
+          "Street": "Storvadersgatan",
+          "PostalCode": "41832"
+        }
+      }
+    ],
+    "Teacher": null
+  }
+]

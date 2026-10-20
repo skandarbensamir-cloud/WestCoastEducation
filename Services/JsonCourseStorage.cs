@@ -16,7 +16,6 @@ public class JsonCourseStorage : ICourseStorage
         
         
         
-        
         string json = File.ReadAllText(_filepath);
         return JsonSerializer.Deserialize<List<Course>>(json) ?? new List<Course>();
         
@@ -25,7 +24,8 @@ public class JsonCourseStorage : ICourseStorage
 
     public void SaveCourses(List<Course> courses)
     {
-       string json = JsonSerializer.Serialize(courses);
+       var options = new JsonSerializerOptions {WriteIndented = true};
+       string json = JsonSerializer.Serialize(courses, options);
        File.WriteAllText(_filepath, json);
     }
 }
