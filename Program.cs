@@ -1,6 +1,8 @@
 ﻿using WestCoastEducation.Enums;
 using WestCoastEducation.Models;
 namespace WestCoastEducation;
+
+using Microsoft.VisualBasic;
 using WestCoastEducation.Interfaces;
 using WestCoastEducation.Services;
 
@@ -19,11 +21,13 @@ class Program
 
         var student = new Student("Anders", "Svensson", "20070918", "0784563476", "41832", "Storvadersgatan", "Goteborg");
         course.AddStudent(student);
-        
-        
 
+        var student2 = new Student("Lisa", "Persson", "20070817", "0798765467", "41105", "Tuvegatan", "Goteborg");
+        course.AddStudent(student2);
         
-
+        var student3 = new Student("Lucas", "Gomes", "20000212", "0704686967", "44230", "StoraTorget", "Kungalv");
+        course.AddStudent(student3);
+        
         var teacher = new Teacher("Hjalmar", "Nilsson", "19770436", "0704686977", "42355", "Regnstamsgatan", "Goteborg", "Programming");
         teacher.AddCourse(course);
         
@@ -39,11 +43,11 @@ class Program
         Console.WriteLine("Press s to show students");
         Console.WriteLine("Press v to save courses");
         Console.WriteLine("Press l to load courses");
-         Console.WriteLine("Press Enter to exit the program");
+        Console.WriteLine("Press Enter to exit the program");
 
         
        
-       var choice = Console.ReadLine();
+        var choice = Console.ReadLine();
 
         switch (choice)
         {
