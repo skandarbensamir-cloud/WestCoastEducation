@@ -8,9 +8,8 @@ public string FirstName {get; set;}
 public string LastName {get; set;}
 public string PersonIdentityNumber {get; set;}
 public string PhoneNumber {get; set;}
-public string PostalCode {get; set;}
-public string Address {get; set;}
-public string City{get; set;}
+public Address Address {get; set;}
+
 
 //Our Person Constructor.....
 public Person(string firstName, string lastName, string personIdentityNumber, string phoneNumber, string postalCode, string address, string city)
@@ -19,9 +18,7 @@ public Person(string firstName, string lastName, string personIdentityNumber, st
         LastName = lastName;
         PersonIdentityNumber = personIdentityNumber;
         PhoneNumber = phoneNumber;
-        PostalCode = postalCode;
-        Address = address;
-        City = city;
+        Address = new Address(city, address, postalCode);
     }
 
     public override string ToString()
