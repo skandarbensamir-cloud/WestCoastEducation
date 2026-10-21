@@ -10,5 +10,11 @@ public class EducationManager:Teacher//Ärver från teacher...
     {
         DateOfEmployment = dateOfEmployment;
     }
+
+    public override string ToString()
+    {
+        return base.ToString()
+        +$"\nDate of employment:{DateOfEmployment}";
+    }
     
 }

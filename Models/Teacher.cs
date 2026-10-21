@@ -37,6 +37,12 @@ public class Teacher: Person //Ärver från Person...
             Console.WriteLine(exsisting);
             
         }
-    }   
+    }
+
+    public override string ToString()
+    {
+        return base.ToString() 
+        + $"\nKnowledge area:{KnowledgeArea}";
+    }
 
 }

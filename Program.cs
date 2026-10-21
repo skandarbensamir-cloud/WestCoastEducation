@@ -1,8 +1,6 @@
 ﻿using WestCoastEducation.Enums;
 using WestCoastEducation.Models;
 namespace WestCoastEducation;
-
-using Microsoft.VisualBasic;
 using WestCoastEducation.Interfaces;
 using WestCoastEducation.Services;
 
@@ -10,6 +8,11 @@ class Program
 {
     static void Main()
     {
+        Console.WriteLine("===============================");
+        Console.WriteLine("Welcome to WestCoastEducation");
+        Console.WriteLine("===============================");
+        
+        
         DateTime startDate = new DateTime(2026, 8, 24);
         DateTime endDate = new DateTime(2028,6,17 );
         int length = 10;
@@ -32,61 +35,39 @@ class Program
         teacher.AddCourse(course);
         
         ICourseStorage storage = new JsonCourseStorage();
+
+        // Shows staff - each class buuilds on it's parent's ToString 
+        Console.WriteLine("\n---staff---");
+        Console.WriteLine(teacher);
+
+        var manager = new EducationManager("Maria", "fredriksson", "19800512", "0709876543", "41309", "Drottningsgatan", "Goteborg", "Education", new DateTime(2020, 3 , 1));
+        Console.WriteLine(manager);
+
+        var admin = new Administrator("Erik", "Larsson", "19740116", "0786334576", "41799", "Hisingsgatan", "Goteborg", "Administration", new DateTime(2018, 7 , 2));
+        Console.WriteLine(admin);
         
-        while (true)
-        {
-        Console.WriteLine("===============================");
-        Console.WriteLine("Welcome to WestCoastEducation");
-        Console.WriteLine("===============================");
-           
-        Console.WriteLine("Press x to show courses");
-        Console.WriteLine("Press s to show students");
-        Console.WriteLine("Press v to save courses");
-        Console.WriteLine("Press l to load courses");
-        Console.WriteLine("Press Enter to exit the program");
-
+        // Show all courses the teacher is responsible for
+        Console.WriteLine("\n---Courses---");
+        teacher.ListCourses();
         
-       
-        var choice = Console.ReadLine();
-
-        switch (choice)
-        {
-            case "x":
-            teacher.ListCourses();
-            break;
-
-            case "s":
-            course.ListStudents();
-            break;
-
-            case "v":
-            storage.SaveCourses(teacher.Courses);
-            Console.WriteLine("Course saved");
-            break;
-
-
-            case "l":
-            var LoadCourses1 = storage.LoadCourses();
-            Console.WriteLine($"Loaded {LoadCourses1.Count} courses");
-            break;
-
-            case "":
-            return;
-
-        }
-
-            
-
-        }
-       
-       
-
-
-       
+        // Lists every student registered in the course
+        Console.WriteLine("\n---Students---");
+        course.ListStudents();
         
-
-
+        // Tries to add the same student again
+        Console.WriteLine("\n---Duplicate test---");
+        course.AddStudent(student);
         
-       
-    }
+        // Saves the teacher's courses to a JSON file and loads them back through the ICourseStorage interFace
+        Console.WriteLine("\n---Save & Load JSon");
+        storage.SaveCourses(teacher.Courses);
+        Console.WriteLine("Course saved");
+
+        var Loadcourse1 = storage.LoadCourses();
+        Console.WriteLine($"Loaded {Loadcourse1.Count} courses");
+    
+        
+        
+        
+     }
 }
